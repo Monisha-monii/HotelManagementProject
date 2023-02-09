@@ -1,15 +1,13 @@
-	package com.calculation;
+package com.calculation;
 import com.addition.Addition;
 import com.substraction.Substraction;
 import com.multiplication.Multiplication;
 import com.division.Division;
 
-
-
 import java.util.Scanner;
 
-public class Calculator {
-
+public class Calculator
+{
 	public static void main(String[] args) 
 	{
 		int choice = 0;
@@ -23,10 +21,10 @@ public class Calculator {
 			while(choice != 5 )
 			{
 				System.out.print("\n1 - Addition");
-				System.out.print("2 - Substraction");
-				System.out.print("3 - Multiplication");
-				System.out.print("4 - Division");
-				System.out.print("5 - Exit");
+				System.out.print("\n2 - Substraction");
+				System.out.print("\n3 - Multiplication");
+				System.out.print("\n4 - Division");
+				System.out.print("\n5 - Exit");
 				System.out.print("\n Enter your Choice");
 				choice = input.nextInt();
 				
@@ -36,6 +34,7 @@ public class Calculator {
 						System.out.print("\nThanks for using");
 					    System.exit(0);
 				}
+				if(choice>0 && choice<6) {
 				
 				System.out.print("\nEnter First value");
 				n1 = input.nextFloat();
@@ -64,14 +63,18 @@ public class Calculator {
 					System.out.print("Division: " + Division.division(n1,n2));
 				}
 			}	
+				else
+				{
+					System.out.println("\n Please select the Available Choice");
+				}
+			}
 		}
+		
 		catch(Exception ex)
 		{
 			
 				System.out.println("\nError: " + ex.toString() + "Occured");
 				
-					
-			
 		}
 
 	}
